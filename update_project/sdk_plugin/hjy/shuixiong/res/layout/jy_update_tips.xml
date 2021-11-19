@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/jy_dialog_circular_white_bg"
+    android:orientation="vertical"
+    >
+    <LinearLayout 
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/jy_dialog_circular_white_bg"
+        >
+        
+    
+	<TextView 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="发现新版本"
+	    android:textSize="18sp"
+	    android:textColor="#32C3E9"
+	    android:layout_marginTop="20dp"
+		android:gravity="center"	    
+	    />
+	
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="更新说明："
+	    android:textSize="14sp"
+	    android:textColor="#333333"
+	    android:layout_marginTop="25dp"
+	    android:layout_marginLeft="20dp"
+	    />
+	
+	<TextView 
+	    android:id="@+id/tv_update_tip"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="更新内容"
+	    android:textSize="14sp"
+	    android:textColor="#666666"
+	    android:layout_marginTop="11dp"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="20dp"
+	    />
+	<TextView
+	    android:id="@+id/tv_update_now"
+            style="@style/jy_Button_bg"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/jy_update_submit_bg"
+            android:layout_marginBottom="17dp"
+            android:text="立即更新" />
+	
+	</LinearLayout>
+</LinearLayout>

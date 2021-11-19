@@ -1,0 +1,29 @@
+{
+  "config_files": [
+    {
+      "type": "json",
+      "file": "assets/channel_key.json"
+    },
+    {
+      "type": "xml",
+      "file": "AndroidManifest.xml"
+    }
+  ],
+  "game_configs": [
+    {
+      "config_name": "荣耀大天使",
+      "game_name": "荣耀大天使",
+      "package_name": "com.rydts.shuixiong",
+      "configs": [
+        {
+          "jy_app_id": "10001",
+          "jy_appkey": "c9c6b230ea8ad66cbb0498"
+        },
+        {
+          "jy_app_id": "10001",
+          "jy_appkey": "c9c6b230ea8ad66cbb0498"
+        }
+      ]
+    }
+  ]
+}

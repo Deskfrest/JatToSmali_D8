@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/jy_dialog_circular_white_bg"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+     >
+	<ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:scrollbars="none"
+	    >
+	 <LinearLayout 
+	     android:layout_width="match_parent"
+	     android:layout_height="match_parent"
+	     android:orientation="vertical"
+	     >
+    <include layout="@layout/jy_title" />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/jy_edit_bg" >
+
+        <EditText
+            android:id="@+id/et_username"
+            style="@style/JY_EDITTEXT_NORMAL"
+            android:background="@null"
+            android:digits="@string/jy_filter_code"
+            android:hint="账号"
+            android:imeOptions="flagNoExtractUi"
+            android:paddingLeft="10dp"
+            android:maxLength="10" />
+    </RelativeLayout>
+	<TextView 
+	    android:id="@+id/jy_register_account_tips"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="6-10位字母、数字、以字母开头"
+	    android:textColor="#FF4747"
+	    android:textSize="10sp"
+	    android:layout_marginTop="5dp"
+	    android:layout_marginLeft="20dp"
+	    android:visibility="gone"
+	    />
+	
+    <jy.sdk.gamesdk.widget.EditTextPassword
+        android:id="@+id/et_password1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/jy_edit_bg"
+        style="@style/JY_EDITTEXT_NORMAL"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:digits="@string/jy_filter_code"
+        android:textColorHint="@color/jy_hint_color"
+        android:hint="密码"
+        android:maxLength="16"
+        >
+    </jy.sdk.gamesdk.widget.EditTextPassword>
+    
+    <jy.sdk.gamesdk.widget.EditTextPassword
+        android:id="@+id/et_password2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/jy_edit_bg"
+        style="@style/JY_EDITTEXT_NORMAL"
+        android:digits="@string/jy_filter_code"
+        android:layout_marginTop="10dp"
+        android:hint="确认密码"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/jy_hint_color"
+        android:paddingRight="10dp"
+        android:maxLength="16"
+        >
+    </jy.sdk.gamesdk.widget.EditTextPassword>
+
+
+    <TextView
+        android:id="@+id/tv_reg_submit"
+        style="@style/jy_Button_bg"
+        android:layout_marginTop="22dp"
+        android:text="注册" />
+
+   <RelativeLayout
+        android:id="@+id/rl_agree_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <CheckBox
+            android:id="@+id/cb_agree_pro_jy"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/jy_checkbox_selector"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:checked="true"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/tv_agreepro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/cb_agree_pro_jy"
+            android:text="登录注册即表示同意"
+            android:textColor="@color/jy_easygray"
+            android:textSize="11sp"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/tv_protocal_jy"
+            android:layout_toEndOf="@id/tv_agreepro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#32C3E9"
+            android:textSize="11sp"
+            tools:ignore="RtlCompat" />
+    </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

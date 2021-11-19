@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sboran.game.sdkdemo">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true">
+
+        <receiver
+            android:name="com.bytedance.applog.collector.Collector"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- 需要修改,jy的appid和appkey参数 -->
+        <meta-data
+            android:name="jy_app_id"
+            android:value="10001" />
+        <meta-data
+            android:name="jy_appkey"
+            android:value="c9c6b230ea8ad66cbb0498" />
+
+        <!-- 修改 authorities 为 包名.com.liulishuo.okdownload -->
+        <provider
+            android:name="com.liulishuo.okdownload.OkDownloadProvider"
+            android:authorities="com.rydts.shuixiong.com.liulishuo.okdownload"
+            android:exported="false" />
+        <!-- 修改 authorities 为 包名.jyfileprovider -->
+        <provider
+            android:name="jy.sdk.gamesdk.update.JyFileProvider"
+            android:authorities="com.rydts.shuixiong.jyfileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/jy_file_paths" />
+        </provider>
+
+        <!-- 以下不用修改 -->
+        <meta-data
+            android:name="jy_splash_pic"
+            android:value="true" />
+        <meta-data
+            android:name="jy_userlmp"
+            android:value="jy.sdk.channel.jy.Jy" />
+        <meta-data
+            android:name="jy_channelId"
+            android:value="1" />
+        <meta-data
+            android:name="jy_subChannelId"
+            android:value="0" />
+
+        <!-- 若cp Activity固定了方向,那么设置了Translucent 就不会旋转. -->
+        <activity
+            android:name="jy.sdk.gamesdk.activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="jy.sdk.gamesdk.activity.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="jy.sdk.gamesdk.activity.AccountActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
+
+
+
+        <activity
+            android:name="jy.sdk.gamesdk.update.Jy_OPermissionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="jy.sdk.common.components.JyProActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <service android:name="jy.sdk.gamesdk.GameService" />
+        <!-- 这个meta是用来适配全面屏 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+    </application>
+
+</manifest>
