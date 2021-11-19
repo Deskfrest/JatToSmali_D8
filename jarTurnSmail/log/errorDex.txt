@@ -1,0 +1,422 @@
+2021-02-01 15:05:52  Error:转译.dex失败_文件名： wlywansdk (1) 
+AbnormalStart:
+unknown output extension: D:\work\jarTurnSmail/build/wlywansdk
+usage:
+  dx --dex [--debug] [--verbose] [--positions=<style>] [--no-locals]
+  [--no-optimize] [--statistics] [--[no-]optimize-list=<file>] [--no-strict]
+  [--keep-classes] [--output=<file>] [--dump-to=<file>] [--dump-width=<n>]
+  [--dump-method=<name>[*]] [--verbose-dump] [--no-files] [--core-library]
+  [--num-threads=<n>] [--incremental] [--force-jumbo] [--no-warning]
+  [--multi-dex [--main-dex-list=<file> [--minimal-main-dex]]
+  [--input-list=<file>]
+  [<file>.class | <file>.{zip,jar,apk} | <directory>] ...
+    Convert a set of classfiles into a dex file, optionally embedded in a
+    jar/zip. Output name must end with one of: .dex .jar .zip .apk or be a directory.
+    Positions options: none, important, lines.
+    --multi-dex: allows to generate several dex files if needed. This option is 
+    exclusive with --incremental, causes --num-threads to be ignored and only
+    supports folder or archive output.
+    --main-dex-list=<file>: <file> is a list of class file names, classes defined by
+    those class files are put in classes.dex.
+    --minimal-main-dex: only classes selected by --main-dex-list are to be put in
+    the main dex.
+    --input-list: <file> is a list of inputs.
+    Each line in <file> must end with one of: .class .jar .zip .apk or be a directory.
+  dx --annotool --annotation=<class> [--element=<element types>]
+  [--print=<print types>]
+  dx --dump [--debug] [--strict] [--bytes] [--optimize]
+  [--basic-blocks | --rop-blocks | --ssa-blocks | --dot] [--ssa-step=<step>]
+  [--width=<n>] [<file>.class | <file>.txt] ...
+    Dump classfiles, or transformations thereof, in a human-oriented format.
+  dx --find-usages <file.dex> <declaring type> <member>
+    Find references and declarations to a field or method.
+    declaring type: a class name in internal form, like Ljava/lang/Object;
+    member: a field or method name, like hashCode
+  dx -J<option> ... <arguments, in one of the above forms>
+    Pass VM-specific options to the virtual machine that runs dx.
+  dx --version
+    Print the version of this tool (1.11).
+  dx --help
+    Print this message.
+
+AbnormalEnd 
+2021-11-02 09:48:27  Error:转译.dex失败_文件名： gson-2.8.6 
+AbnormalStart:
+
+UNEXPECTED TOP-LEVEL EXCEPTION:
+java.lang.RuntimeException: Exception parsing classes
+	at com.android.dx.command.dexer.Main.processClass(Main.java:752)
+	at com.android.dx.command.dexer.Main.processFileBytes(Main.java:718)
+	at com.android.dx.command.dexer.Main.access$1200(Main.java:85)
+	at com.android.dx.command.dexer.Main$FileBytesConsumer.processFileBytes(Main.java:1645)
+	at com.android.dx.cf.direct.ClassPathOpener.processArchive(ClassPathOpener.java:284)
+	at com.android.dx.cf.direct.ClassPathOpener.processOne(ClassPathOpener.java:166)
+	at com.android.dx.cf.direct.ClassPathOpener.process(ClassPathOpener.java:144)
+	at com.android.dx.command.dexer.Main.processOne(Main.java:672)
+	at com.android.dx.command.dexer.Main.processAllFiles(Main.java:574)
+	at com.android.dx.command.dexer.Main.runMonoDex(Main.java:311)
+	at com.android.dx.command.dexer.Main.run(Main.java:277)
+	at com.android.dx.command.dexer.Main.main(Main.java:245)
+	at com.android.dx.command.Main.main(Main.java:106)
+Caused by: com.android.dx.cf.iface.ParseException: bad class file magic (cafebabe) or version (0035.0000)
+	at com.android.dx.cf.direct.DirectClassFile.parse0(DirectClassFile.java:472)
+	at com.android.dx.cf.direct.DirectClassFile.parse(DirectClassFile.java:406)
+	at com.android.dx.cf.direct.DirectClassFile.parseToInterfacesIfNecessary(DirectClassFile.java:388)
+	at com.android.dx.cf.direct.DirectClassFile.getMagic(DirectClassFile.java:251)
+	at com.android.dx.command.dexer.Main.parseClass(Main.java:764)
+	at com.android.dx.command.dexer.Main.access$1500(Main.java:85)
+	at com.android.dx.command.dexer.Main$ClassParserTask.call(Main.java:1684)
+	at com.android.dx.command.dexer.Main.processClass(Main.java:749)
+	... 12 more
+1 error; aborting
+
+AbnormalEnd 
+2021-11-02 10:20:26  Error:转译.dex失败_文件名： gson-2.8.6 
+AbnormalStart:
+
+UNEXPECTED TOP-LEVEL EXCEPTION:
+java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1597)
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1488)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1495)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1299)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1262)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:733)
+	at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:842)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:248)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:177)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:191)
+	at com.android.dx.cf.direct.ClassPathOpener.processArchive(ClassPathOpener.java:244)
+	at com.android.dx.cf.direct.ClassPathOpener.processOne(ClassPathOpener.java:166)
+	at com.android.dx.cf.direct.ClassPathOpener.process(ClassPathOpener.java:144)
+	at com.android.dx.command.dexer.Main.processOne(Main.java:672)
+	at com.android.dx.command.dexer.Main.processAllFiles(Main.java:574)
+	at com.android.dx.command.dexer.Main.runMonoDex(Main.java:311)
+	at com.android.dx.command.dexer.Main.run(Main.java:277)
+	at com.android.dx.command.dexer.Main.main(Main.java:245)
+	at com.android.dx.command.Main.main(Main.java:106)
+1 error; aborting
+
+AbnormalEnd 
+2021-11-18 17:39:55  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+
+UNEXPECTED TOP-LEVEL EXCEPTION:
+java.lang.RuntimeException: Exception parsing classes
+	at com.android.dx.command.dexer.Main.processClass(Main.java:752)
+	at com.android.dx.command.dexer.Main.processFileBytes(Main.java:718)
+	at com.android.dx.command.dexer.Main.access$1200(Main.java:85)
+	at com.android.dx.command.dexer.Main$FileBytesConsumer.processFileBytes(Main.java:1645)
+	at com.android.dx.cf.direct.ClassPathOpener.processArchive(ClassPathOpener.java:284)
+	at com.android.dx.cf.direct.ClassPathOpener.processOne(ClassPathOpener.java:166)
+	at com.android.dx.cf.direct.ClassPathOpener.process(ClassPathOpener.java:144)
+	at com.android.dx.command.dexer.Main.processOne(Main.java:672)
+	at com.android.dx.command.dexer.Main.processAllFiles(Main.java:574)
+	at com.android.dx.command.dexer.Main.runMonoDex(Main.java:311)
+	at com.android.dx.command.dexer.Main.run(Main.java:277)
+	at com.android.dx.command.dexer.Main.main(Main.java:245)
+	at com.android.dx.command.Main.main(Main.java:106)
+Caused by: com.android.dx.cf.iface.ParseException: bad class file magic (cafebabe) or version (0034.0000)
+	at com.android.dx.cf.direct.DirectClassFile.parse0(DirectClassFile.java:472)
+	at com.android.dx.cf.direct.DirectClassFile.parse(DirectClassFile.java:406)
+	at com.android.dx.cf.direct.DirectClassFile.parseToInterfacesIfNecessary(DirectClassFile.java:388)
+	at com.android.dx.cf.direct.DirectClassFile.getMagic(DirectClassFile.java:251)
+	at com.android.dx.command.dexer.Main.parseClass(Main.java:764)
+	at com.android.dx.command.dexer.Main.access$1500(Main.java:85)
+	at com.android.dx.command.dexer.Main$ClassParserTask.call(Main.java:1684)
+	at com.android.dx.command.dexer.Main.processClass(Main.java:749)
+	... 12 more
+1 error; aborting
+
+AbnormalEnd 
+2021-11-18 17:40:10  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+
+UNEXPECTED TOP-LEVEL EXCEPTION:
+java.lang.RuntimeException: Exception parsing classes
+	at com.android.dx.command.dexer.Main.processClass(Main.java:752)
+	at com.android.dx.command.dexer.Main.processFileBytes(Main.java:718)
+	at com.android.dx.command.dexer.Main.access$1200(Main.java:85)
+	at com.android.dx.command.dexer.Main$FileBytesConsumer.processFileBytes(Main.java:1645)
+	at com.android.dx.cf.direct.ClassPathOpener.processArchive(ClassPathOpener.java:284)
+	at com.android.dx.cf.direct.ClassPathOpener.processOne(ClassPathOpener.java:166)
+	at com.android.dx.cf.direct.ClassPathOpener.process(ClassPathOpener.java:144)
+	at com.android.dx.command.dexer.Main.processOne(Main.java:672)
+	at com.android.dx.command.dexer.Main.processAllFiles(Main.java:574)
+	at com.android.dx.command.dexer.Main.runMonoDex(Main.java:311)
+	at com.android.dx.command.dexer.Main.run(Main.java:277)
+	at com.android.dx.command.dexer.Main.main(Main.java:245)
+	at com.android.dx.command.Main.main(Main.java:106)
+Caused by: com.android.dx.cf.iface.ParseException: bad class file magic (cafebabe) or version (0034.0000)
+	at com.android.dx.cf.direct.DirectClassFile.parse0(DirectClassFile.java:472)
+	at com.android.dx.cf.direct.DirectClassFile.parse(DirectClassFile.java:406)
+	at com.android.dx.cf.direct.DirectClassFile.parseToInterfacesIfNecessary(DirectClassFile.java:388)
+	at com.android.dx.cf.direct.DirectClassFile.getMagic(DirectClassFile.java:251)
+	at com.android.dx.command.dexer.Main.parseClass(Main.java:764)
+	at com.android.dx.command.dexer.Main.access$1500(Main.java:85)
+	at com.android.dx.command.dexer.Main$ClassParserTask.call(Main.java:1684)
+	at com.android.dx.command.dexer.Main.processClass(Main.java:749)
+	... 12 more
+1 error; aborting
+
+AbnormalEnd 
+2021-11-18 17:42:49  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+
+UNEXPECTED TOP-LEVEL EXCEPTION:
+java.lang.RuntimeException: Exception parsing classes
+	at com.android.dx.command.dexer.Main.processClass(Main.java:752)
+	at com.android.dx.command.dexer.Main.processFileBytes(Main.java:718)
+	at com.android.dx.command.dexer.Main.access$1200(Main.java:85)
+	at com.android.dx.command.dexer.Main$FileBytesConsumer.processFileBytes(Main.java:1645)
+	at com.android.dx.cf.direct.ClassPathOpener.processArchive(ClassPathOpener.java:284)
+	at com.android.dx.cf.direct.ClassPathOpener.processOne(ClassPathOpener.java:166)
+	at com.android.dx.cf.direct.ClassPathOpener.process(ClassPathOpener.java:144)
+	at com.android.dx.command.dexer.Main.processOne(Main.java:672)
+	at com.android.dx.command.dexer.Main.processAllFiles(Main.java:574)
+	at com.android.dx.command.dexer.Main.runMonoDex(Main.java:311)
+	at com.android.dx.command.dexer.Main.run(Main.java:277)
+	at com.android.dx.command.dexer.Main.main(Main.java:245)
+	at com.android.dx.command.Main.main(Main.java:106)
+Caused by: com.android.dx.cf.iface.ParseException: bad class file magic (cafebabe) or version (0034.0000)
+	at com.android.dx.cf.direct.DirectClassFile.parse0(DirectClassFile.java:472)
+	at com.android.dx.cf.direct.DirectClassFile.parse(DirectClassFile.java:406)
+	at com.android.dx.cf.direct.DirectClassFile.parseToInterfacesIfNecessary(DirectClassFile.java:388)
+	at com.android.dx.cf.direct.DirectClassFile.getMagic(DirectClassFile.java:251)
+	at com.android.dx.command.dexer.Main.parseClass(Main.java:764)
+	at com.android.dx.command.dexer.Main.access$1500(Main.java:85)
+	at com.android.dx.command.dexer.Main$ClassParserTask.call(Main.java:1684)
+	at com.android.dx.command.dexer.Main.processClass(Main.java:749)
+	... 12 more
+1 error; aborting
+
+AbnormalEnd 
+2021-11-18 17:45:19  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+
+UNEXPECTED TOP-LEVEL EXCEPTION:
+java.lang.RuntimeException: Exception parsing classes
+	at com.android.dx.command.dexer.Main.processClass(Main.java:752)
+	at com.android.dx.command.dexer.Main.processFileBytes(Main.java:718)
+	at com.android.dx.command.dexer.Main.access$1200(Main.java:85)
+	at com.android.dx.command.dexer.Main$FileBytesConsumer.processFileBytes(Main.java:1645)
+	at com.android.dx.cf.direct.ClassPathOpener.processArchive(ClassPathOpener.java:284)
+	at com.android.dx.cf.direct.ClassPathOpener.processOne(ClassPathOpener.java:166)
+	at com.android.dx.cf.direct.ClassPathOpener.process(ClassPathOpener.java:144)
+	at com.android.dx.command.dexer.Main.processOne(Main.java:672)
+	at com.android.dx.command.dexer.Main.processAllFiles(Main.java:574)
+	at com.android.dx.command.dexer.Main.runMonoDex(Main.java:311)
+	at com.android.dx.command.dexer.Main.run(Main.java:277)
+	at com.android.dx.command.dexer.Main.main(Main.java:245)
+	at com.android.dx.command.Main.main(Main.java:106)
+Caused by: com.android.dx.cf.iface.ParseException: bad class file magic (cafebabe) or version (0034.0000)
+	at com.android.dx.cf.direct.DirectClassFile.parse0(DirectClassFile.java:472)
+	at com.android.dx.cf.direct.DirectClassFile.parse(DirectClassFile.java:406)
+	at com.android.dx.cf.direct.DirectClassFile.parseToInterfacesIfNecessary(DirectClassFile.java:388)
+	at com.android.dx.cf.direct.DirectClassFile.getMagic(DirectClassFile.java:251)
+	at com.android.dx.command.dexer.Main.parseClass(Main.java:764)
+	at com.android.dx.command.dexer.Main.access$1500(Main.java:85)
+	at com.android.dx.command.dexer.Main$ClassParserTask.call(Main.java:1684)
+	at com.android.dx.command.dexer.Main.processClass(Main.java:749)
+	... 12 more
+1 error; aborting
+
+AbnormalEnd 
+2021-11-18 17:58:10  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+
+UNEXPECTED TOP-LEVEL EXCEPTION:
+java.lang.RuntimeException: Exception parsing classes
+	at com.android.dx.command.dexer.Main.processClass(Main.java:752)
+	at com.android.dx.command.dexer.Main.processFileBytes(Main.java:718)
+	at com.android.dx.command.dexer.Main.access$1200(Main.java:85)
+	at com.android.dx.command.dexer.Main$FileBytesConsumer.processFileBytes(Main.java:1645)
+	at com.android.dx.cf.direct.ClassPathOpener.processArchive(ClassPathOpener.java:284)
+	at com.android.dx.cf.direct.ClassPathOpener.processOne(ClassPathOpener.java:166)
+	at com.android.dx.cf.direct.ClassPathOpener.process(ClassPathOpener.java:144)
+	at com.android.dx.command.dexer.Main.processOne(Main.java:672)
+	at com.android.dx.command.dexer.Main.processAllFiles(Main.java:574)
+	at com.android.dx.command.dexer.Main.runMonoDex(Main.java:311)
+	at com.android.dx.command.dexer.Main.run(Main.java:277)
+	at com.android.dx.command.dexer.Main.main(Main.java:245)
+	at com.android.dx.command.Main.main(Main.java:106)
+Caused by: com.android.dx.cf.iface.ParseException: bad class file magic (cafebabe) or version (0034.0000)
+	at com.android.dx.cf.direct.DirectClassFile.parse0(DirectClassFile.java:472)
+	at com.android.dx.cf.direct.DirectClassFile.parse(DirectClassFile.java:406)
+	at com.android.dx.cf.direct.DirectClassFile.parseToInterfacesIfNecessary(DirectClassFile.java:388)
+	at com.android.dx.cf.direct.DirectClassFile.getMagic(DirectClassFile.java:251)
+	at com.android.dx.command.dexer.Main.parseClass(Main.java:764)
+	at com.android.dx.command.dexer.Main.access$1500(Main.java:85)
+	at com.android.dx.command.dexer.Main$ClassParserTask.call(Main.java:1684)
+	at com.android.dx.command.dexer.Main.processClass(Main.java:749)
+	... 12 more
+1 error; aborting
+
+AbnormalEnd 
+2021-11-18 18:01:19  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+
+UNEXPECTED TOP-LEVEL EXCEPTION:
+java.lang.RuntimeException: Exception parsing classes
+	at com.android.dx.command.dexer.Main.processClass(Main.java:752)
+	at com.android.dx.command.dexer.Main.processFileBytes(Main.java:718)
+	at com.android.dx.command.dexer.Main.access$1200(Main.java:85)
+	at com.android.dx.command.dexer.Main$FileBytesConsumer.processFileBytes(Main.java:1645)
+	at com.android.dx.cf.direct.ClassPathOpener.processArchive(ClassPathOpener.java:284)
+	at com.android.dx.cf.direct.ClassPathOpener.processOne(ClassPathOpener.java:166)
+	at com.android.dx.cf.direct.ClassPathOpener.process(ClassPathOpener.java:144)
+	at com.android.dx.command.dexer.Main.processOne(Main.java:672)
+	at com.android.dx.command.dexer.Main.processAllFiles(Main.java:574)
+	at com.android.dx.command.dexer.Main.runMonoDex(Main.java:311)
+	at com.android.dx.command.dexer.Main.run(Main.java:277)
+	at com.android.dx.command.dexer.Main.main(Main.java:245)
+	at com.android.dx.command.Main.main(Main.java:106)
+Caused by: com.android.dx.cf.iface.ParseException: bad class file magic (cafebabe) or version (0034.0000)
+	at com.android.dx.cf.direct.DirectClassFile.parse0(DirectClassFile.java:472)
+	at com.android.dx.cf.direct.DirectClassFile.parse(DirectClassFile.java:406)
+	at com.android.dx.cf.direct.DirectClassFile.parseToInterfacesIfNecessary(DirectClassFile.java:388)
+	at com.android.dx.cf.direct.DirectClassFile.getMagic(DirectClassFile.java:251)
+	at com.android.dx.command.dexer.Main.parseClass(Main.java:764)
+	at com.android.dx.command.dexer.Main.access$1500(Main.java:85)
+	at com.android.dx.command.dexer.Main$ClassParserTask.call(Main.java:1684)
+	at com.android.dx.command.dexer.Main.processClass(Main.java:749)
+	... 12 more
+1 error; aborting
+
+AbnormalEnd 
+2021-11-18 18:11:47  Error:转译.dex失败_文件名： toutiao-5.3.0 
+AbnormalStart:
+
+UNEXPECTED TOP-LEVEL EXCEPTION:
+java.lang.RuntimeException: Exception parsing classes
+	at com.android.dx.command.dexer.Main.processClass(Main.java:752)
+	at com.android.dx.command.dexer.Main.processFileBytes(Main.java:718)
+	at com.android.dx.command.dexer.Main.access$1200(Main.java:85)
+	at com.android.dx.command.dexer.Main$FileBytesConsumer.processFileBytes(Main.java:1645)
+	at com.android.dx.cf.direct.ClassPathOpener.processArchive(ClassPathOpener.java:284)
+	at com.android.dx.cf.direct.ClassPathOpener.processOne(ClassPathOpener.java:166)
+	at com.android.dx.cf.direct.ClassPathOpener.process(ClassPathOpener.java:144)
+	at com.android.dx.command.dexer.Main.processOne(Main.java:672)
+	at com.android.dx.command.dexer.Main.processAllFiles(Main.java:574)
+	at com.android.dx.command.dexer.Main.runMonoDex(Main.java:311)
+	at com.android.dx.command.dexer.Main.run(Main.java:277)
+	at com.android.dx.command.dexer.Main.main(Main.java:245)
+	at com.android.dx.command.Main.main(Main.java:106)
+Caused by: com.android.dx.cf.iface.ParseException: bad class file magic (cafebabe) or version (0034.0000)
+	at com.android.dx.cf.direct.DirectClassFile.parse0(DirectClassFile.java:472)
+	at com.android.dx.cf.direct.DirectClassFile.parse(DirectClassFile.java:406)
+	at com.android.dx.cf.direct.DirectClassFile.parseToInterfacesIfNecessary(DirectClassFile.java:388)
+	at com.android.dx.cf.direct.DirectClassFile.getMagic(DirectClassFile.java:251)
+	at com.android.dx.command.dexer.Main.parseClass(Main.java:764)
+	at com.android.dx.command.dexer.Main.access$1500(Main.java:85)
+	at com.android.dx.command.dexer.Main$ClassParserTask.call(Main.java:1684)
+	at com.android.dx.command.dexer.Main.processClass(Main.java:749)
+	... 12 more
+1 error; aborting
+
+AbnormalEnd 
+2021-11-18 18:13:48  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Uncaught translation error: com.android.dx.cf.code.SimException: invalid opcode ba (invokedynamic requires --min-sdk-version >= 26)
+1 error; aborting
+
+AbnormalEnd 
+2021-11-19 10:50:15  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Uncaught translation error: com.android.dx.cf.code.SimException: invalid opcode ba (invokedynamic requires --min-sdk-version >= 26)
+1 error; aborting
+
+AbnormalEnd 
+2021-11-19 11:21:39  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error in Command line:
+  Unknown option: --output=E:\PycharmProject\jarTurnSmail/build/jy_common_sdk.dex
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 11:23:16  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error in Command line:
+  Unknown option: --output=E:\PycharmProject\jarTurnSmail/build/jy_common_sdk.dex
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 11:36:09  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error in Command line:
+  Unknown option: --output=E:\PycharmProject\jarTurnSmail/build/jy_common_sdk.dex
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 11:37:57  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error: Invalid output: E:\PycharmProject\jarTurnSmail\build\jy_common_sdk.dex
+Output must be a .zip or .jar archive or an existing directory
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 11:39:36  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error: Invalid output: E:\PycharmProject\jarTurnSmail\build\jy_common_sdk.dex
+Output must be a .zip or .jar archive or an existing directory
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 11:43:48  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error: Invalid output: E:\PycharmProject\jarTurnSmail\build\jy_common_sdk.dex
+Output must be a .zip or .jar archive or an existing directory
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 11:48:08  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error in Command line:
+  Unknown option: --libE:\PycharmProject\jarTurnSmail/tools/android.jar
+Error: Invalid output: E:\PycharmProject\jarTurnSmail\build\jy_common_sdk.dex
+Output must be a .zip or .jar archive or an existing directory
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 13:01:41  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error: Invalid output: E:\PycharmProject\jarTurnSmail\build\jy_common_sdk.dex
+Output must be a .zip or .jar archive or an existing directory
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 13:23:28  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error: Invalid output: E:\PycharmProject\jarTurnSmail\build\jy_common_sdk.dex
+Output must be a .zip or .jar archive or an existing directory
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 13:23:55  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error: Invalid output: E:\PycharmProject\jarTurnSmail\build\jy_common_sdk.dex
+Output must be a .zip or .jar archive or an existing directory
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 13:49:55  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error: Invalid output: E:\PycharmProject\jarTurnSmail\build\jy_common_sdk.dex
+Output must be a .zip or .jar archive or an existing directory
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 13:50:30  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error: Invalid output: E:\PycharmProject\jarTurnSmail\build\jy_common_sdk.dex
+Output must be a .zip or .jar archive or an existing directory
+Compilation failed
+
+AbnormalEnd 
+2021-11-19 13:53:43  Error:转译.dex失败_文件名： jy_common_sdk 
+AbnormalStart:
+Error: Invalid output: E:\PycharmProject\jarTurnSmail\build\jy_common_sdk.dex
+Output must be a .zip or .jar archive or an existing directory
+Compilation failed
+
+AbnormalEnd 
